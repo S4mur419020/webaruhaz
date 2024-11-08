@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+    color: aquamarine;
+    
+    
+}
+body{
+    background-color:black ;
+}
+main{
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    background-color:rgb(0, 140, 255) ;
+}
+article, aside, footer, header, nav{
+    border: 2px solid rgb(20, 1, 129);
+    padding: 10px;
+}
+header{
+    background-color: rgb(20, 1, 129);
+    color: aquamarine;
+
+}
+.tartalom img{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid blue;
+    border-radius: 15px;
+
+}
+.tartalom{
+    border: 1px solid blue;
+    border-radius: 15px;
+    background-color:rgb(0, 140, 255) ;
+    font-size:small;
+    
+}
+.tartalom a{
+    border: 3px solid rgb(67, 5, 138);
+    border-radius: 5px;
+    background-color: rgb(24, 0, 146);;
+}
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(20, 1, 129);
+    gap:10px;
+    
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    color: aquamarine;
+    border: 1px solid rgb(24, 0, 146);
+    border-radius: 5px;
+    background-color: rgb(24, 0, 146);;
+}
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+article{
+    grid-area: a;
+}
+aside{
+    grid-area: as;
+
+}
+footer{
+    grid-area: f;
+}
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap:10px;
+    grid-template-areas:
+        "h h"
+        "n n"
+        "a as"
+        "f f"
+        ;
+}
+@media  screen and (max-width:600px) {
+    nav ul{
+        
+        grid-template-columns: 1fr;
+        list-style: none;
+        
+    }
+    main{
+        grid-template-columns: 1fr;
+    gap:10px;
+    grid-template-areas:
+        "h "
+        "n "
+        "a" 
+        "as"
+        "f "
+        ;
+    }
+    
+}
